@@ -100,28 +100,28 @@
             });
         }
 
-        function viewPost(id) {
-            var posts = JSON.parse(localStorage.getItem('posts')) || [];
-            var post = posts.find(post => post.id === id);
-            if (post) {
-                var postDetailWindow = window.open("", "_blank");
-                postDetailWindow.document.write(`
-                        <html lang="ko">
-                        <head>
-                            <meta charset="UTF-8">
-                            <title>${post.title}</title>
-                        </head>
-                        <body>
-                            <h1>${post.title}</h1>
-                            <p><strong>내용:</strong> ${post.content}</p>
-                            <p><strong>연산:</strong> ${post.operator}, <strong>첫 번째 숫자:</strong> ${post.num1}, <strong>두 번째 숫자:</strong> ${post.num2}, <strong>결과:</strong> ${post.result}</p>
-                        </body>
-                        </html>
-                    `);
+        기능. 뷰포스트(ID) {
+ var 게시물 = JSON.parse(localStorage.getItem('posts') || [];
+ var post = posts.find(게시물 => post.id === ID);
+ 만약 (게시물) {
+ varpostDetailWindow = window.open ("", "_blank");
+ postDetailWindows.document.write(')
+ <html lang="ko">
+ <헤드>
+ <meta Charset="UTF-8">
+ <title>${post.title}/<title>
+ </헤드>
+ <바디>
+ <h1>${post.title}</h1>
+<p> <strong>내용://strong> ${post.content}/p>
+<p> <strong>연산:/strong>${post.operator}, <strong>첫 번째 숫자:/strong>${post.num1}, <strong>두 번째 숫자:/strong>${post.num2}, <strong>결과:/strong>${post.result}/p>
+ </바디>
+ </html>
+ `);
             }
         }
 
-        window.onload = displayPosts;
-    </script>
-</body>
+ window.onload = 디스플레이포스트;
+ </script>
+</바디>
 </html>
